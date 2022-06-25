@@ -21,7 +21,7 @@ def tangency_weights(returns,dropna=True,scale_cov=1):
     weights = np.linalg.solve(covmat,returns.mean())
     weights = weights / weights.sum()
 
-    return pd.DataFrame(weights, index=returns.columns)
+    return pd.DataFrame(weights, index=returns.columns, columns=['tangency wts'])
 
 
         
